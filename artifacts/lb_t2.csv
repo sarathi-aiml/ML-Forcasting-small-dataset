@@ -1,0 +1,4 @@
+model,score_val,pred_time_val,fit_time_marginal,fit_order,trial
+WeightedEnsemble,-0.7230370679673853,0.6130234750453383,0.09868216700851917,3,zeroshot_chronos
+Chronos_bolt_base[bolt_base],-0.7230370679673853,0.6128897666931152,3.1700351238250732,2,zeroshot_chronos
+Chronos_bolt_small[bolt_small],-0.7560869265961051,0.4676051139831543,4.055746793746948,1,zeroshot_chronos

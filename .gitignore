@@ -1,0 +1,48 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+
+# ---- Virtual environment (1.4 GB) ----
+.venv/
+venv/
+env/
+
+# ---- Trained model artifacts (640 MB) ----
+# AutoGluon predictors, including Chronos weight checkpoints. Regenerate with
+# 05_trial_automl.py rather than versioning them; individual checkpoint files
+# also embed absolute local paths.
+ag_models/
+
+# ---- Run logs ----
+# Excluded because they contain Snowsight deeplinks with account-specific
+# identifiers, and absolute local filesystem paths.
+*.log
+*.pid
+
+# ---- Local Snowflake / credential material ----
+# Belt and braces: none of these are produced by this project, but they must
+# never be committed if someone adds them locally.
+connections.toml
+config.toml
+.snowflake/
+*.p8
+*.pem
+*.key
+.env
+.env.*
+secrets.json
+credentials.json
+
+# ---- Editor / OS ----
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# ---- Agent scratch ----
+.cortex/
+
+# Real identifier list for security_scan.py - never commit
+.scan-identifiers.json

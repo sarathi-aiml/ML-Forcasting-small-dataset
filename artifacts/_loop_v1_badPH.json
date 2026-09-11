@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "NEVER": {
+      "mean_MASE": 0.9076,
+      "worst_step_MASE": 1.3072,
+      "mean_worst_dept": 1.4114,
+      "sMAPE": 29.902,
+      "ME": 0.4009,
+      "PICP80": 0.9826
+    },
+    "TRIGGERED": {
+      "mean_MASE": 0.9165,
+      "worst_step_MASE": 1.3072,
+      "mean_worst_dept": 1.4461,
+      "sMAPE": 30.694,
+      "ME": 0.7498,
+      "PICP80": 0.9547
+    },
+    "ALWAYS": {
+      "mean_MASE": 0.9216,
+      "worst_step_MASE": 1.3072,
+      "mean_worst_dept": 1.4665,
+      "sMAPE": 31.0578,
+      "ME": -0.2326,
+      "PICP80": 0.9414
+    }
+  },
+  "n_steps": 13,
+  "triggers_fired": 12,
+  "promotions": 3,
+  "coverage": {
+    "conformal": 0.8942,
+    "native": 0.9547
+  },
+  "elapsed_s": 137.9
+}

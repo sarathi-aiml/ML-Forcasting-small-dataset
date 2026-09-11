@@ -1,0 +1,2 @@
+model,score_val,pred_time_val,fit_time_marginal,fit_order,trial
+Chronos_ft[bolt_small],-0.6913655243426892,0.042342185974121094,822.3784577846527,1,chronos_finetune

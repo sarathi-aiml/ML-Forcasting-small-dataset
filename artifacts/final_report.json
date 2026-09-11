@@ -1,0 +1,362 @@
+{
+  "irreducible_floor_MASE": 0.6648,
+  "best_baseline": {
+    "model": "baseline_seasonal_mean_4w",
+    "MASE": 0.8667
+  },
+  "leaderboard": {
+    "ORACLE_true_mean": {
+      "track": "ORACLE",
+      "MASE": 0.6648,
+      "worst_dept_MASE": 0.6988,
+      "RMSSE": 0.6338,
+      "sMAPE": 23.4499,
+      "MAE": 8.5405,
+      "ME": 0.1249,
+      "WQL": NaN,
+      "PICP80": NaN
+    },
+    "high_quality": {
+      "track": "A: AutoGluon",
+      "MASE": 0.7448,
+      "worst_dept_MASE": 0.8036,
+      "RMSSE": 0.7174,
+      "sMAPE": 25.667,
+      "MAE": 9.6,
+      "ME": 0.9172,
+      "WQL": 0.1728,
+      "PICP80": 0.8929
+    },
+    "ensemble": {
+      "track": "A: AutoGluon",
+      "MASE": 0.7454,
+      "worst_dept_MASE": 0.8048,
+      "RMSSE": 0.7181,
+      "sMAPE": 25.6853,
+      "MAE": 9.6106,
+      "ME": 0.9151,
+      "WQL": 0.1734,
+      "PICP80": 0.8958
+    },
+    "global_covariates": {
+      "track": "A: AutoGluon",
+      "MASE": 0.7576,
+      "worst_dept_MASE": 0.8107,
+      "RMSSE": 0.7202,
+      "sMAPE": 25.8767,
+      "MAE": 9.8919,
+      "ME": -0.6733,
+      "WQL": 0.1783,
+      "PICP80": 0.8601
+    },
+    "sf_forecast_exog": {
+      "track": "B: SNOWFLAKE.ML.FORECAST",
+      "MASE": 0.7694,
+      "worst_dept_MASE": 0.8389,
+      "RMSSE": 0.7214,
+      "sMAPE": 28.8653,
+      "MAE": 10.0721,
+      "ME": 1.1717,
+      "WQL": NaN,
+      "PICP80": 0.7371
+    },
+    "zeroshot_chronos": {
+      "track": "A: AutoGluon",
+      "MASE": 0.7825,
+      "worst_dept_MASE": 0.8622,
+      "RMSSE": 0.7426,
+      "sMAPE": 28.2939,
+      "MAE": 10.0322,
+      "ME": 1.892,
+      "WQL": 0.1772,
+      "PICP80": 0.8065
+    },
+    "sf_forecast_base": {
+      "track": "B: SNOWFLAKE.ML.FORECAST",
+      "MASE": 0.8151,
+      "worst_dept_MASE": 0.9113,
+      "RMSSE": 0.7693,
+      "sMAPE": 29.7841,
+      "MAE": 10.5881,
+      "ME": 1.3837,
+      "WQL": NaN,
+      "PICP80": 0.7292
+    },
+    "classical": {
+      "track": "A: AutoGluon",
+      "MASE": 0.8345,
+      "worst_dept_MASE": 0.9029,
+      "RMSSE": 0.8011,
+      "sMAPE": 28.8265,
+      "MAE": 10.8934,
+      "ME": 3.3529,
+      "WQL": 0.1959,
+      "PICP80": 0.8006
+    },
+    "chronos_finetune": {
+      "track": "A: AutoGluon",
+      "MASE": 0.8469,
+      "worst_dept_MASE": 0.9721,
+      "RMSSE": 0.788,
+      "sMAPE": 28.9623,
+      "MAE": 11.3306,
+      "ME": -4.304,
+      "WQL": 0.1839,
+      "PICP80": 0.751
+    },
+    "baseline_seasonal_mean_4w": {
+      "track": "baseline",
+      "MASE": 0.8667,
+      "worst_dept_MASE": 0.9103,
+      "RMSSE": 0.8395,
+      "sMAPE": 29.1634,
+      "MAE": 11.2951,
+      "ME": 3.7331,
+      "WQL": NaN,
+      "PICP80": NaN
+    },
+    "baseline_seasonal_naive": {
+      "track": "baseline",
+      "MASE": 1.0035,
+      "worst_dept_MASE": 1.1542,
+      "RMSSE": 0.976,
+      "sMAPE": 34.0992,
+      "MAE": 13.1766,
+      "ME": 4.0317,
+      "WQL": NaN,
+      "PICP80": NaN
+    },
+    "baseline_mean": {
+      "track": "baseline",
+      "MASE": 1.5845,
+      "worst_dept_MASE": 2.1707,
+      "RMSSE": 1.3294,
+      "sMAPE": 53.0858,
+      "MAE": 19.4342,
+      "ME": 1.2845,
+      "WQL": NaN,
+      "PICP80": NaN
+    },
+    "baseline_naive": {
+      "track": "baseline",
+      "MASE": 1.6812,
+      "worst_dept_MASE": 2.5204,
+      "RMSSE": 1.4795,
+      "sMAPE": 50.8476,
+      "MAE": 19.5853,
+      "ME": -1.2579,
+      "WQL": NaN,
+      "PICP80": NaN
+    },
+    "baseline_drift": {
+      "track": "baseline",
+      "MASE": 1.7023,
+      "worst_dept_MASE": 2.5556,
+      "RMSSE": 1.4967,
+      "sMAPE": 51.2157,
+      "MAE": 19.8262,
+      "ME": -1.4089,
+      "WQL": NaN,
+      "PICP80": NaN
+    }
+  },
+  "per_department_MASE": {
+    "ORACLE_true_mean": {
+      "CARDIOLOGY": 0.6857,
+      "ELECTIVE_SURGERY": 0.6128,
+      "EMERGENCY": 0.6677,
+      "ONCOLOGY": 0.6787,
+      "ORTHOPEDICS": 0.6988,
+      "PEDIATRICS": 0.6452
+    },
+    "high_quality": {
+      "CARDIOLOGY": 0.7082,
+      "ELECTIVE_SURGERY": 0.8036,
+      "EMERGENCY": 0.7682,
+      "ONCOLOGY": 0.7751,
+      "ORTHOPEDICS": 0.7122,
+      "PEDIATRICS": 0.7018
+    },
+    "ensemble": {
+      "CARDIOLOGY": 0.7083,
+      "ELECTIVE_SURGERY": 0.8048,
+      "EMERGENCY": 0.7698,
+      "ONCOLOGY": 0.7755,
+      "ORTHOPEDICS": 0.7124,
+      "PEDIATRICS": 0.7018
+    },
+    "global_covariates": {
+      "CARDIOLOGY": 0.7406,
+      "ELECTIVE_SURGERY": 0.8023,
+      "EMERGENCY": 0.8107,
+      "ONCOLOGY": 0.7193,
+      "ORTHOPEDICS": 0.7619,
+      "PEDIATRICS": 0.7106
+    },
+    "sf_forecast_exog": {
+      "CARDIOLOGY": 0.7131,
+      "ELECTIVE_SURGERY": 0.7754,
+      "EMERGENCY": 0.8389,
+      "ONCOLOGY": 0.7702,
+      "ORTHOPEDICS": 0.7952,
+      "PEDIATRICS": 0.7235
+    },
+    "zeroshot_chronos": {
+      "CARDIOLOGY": 0.7489,
+      "ELECTIVE_SURGERY": 0.8622,
+      "EMERGENCY": 0.7999,
+      "ONCOLOGY": 0.8284,
+      "ORTHOPEDICS": 0.7538,
+      "PEDIATRICS": 0.702
+    },
+    "sf_forecast_base": {
+      "CARDIOLOGY": 0.7044,
+      "ELECTIVE_SURGERY": 0.9113,
+      "EMERGENCY": 0.8779,
+      "ONCOLOGY": 0.8332,
+      "ORTHOPEDICS": 0.8306,
+      "PEDIATRICS": 0.7333
+    },
+    "classical": {
+      "CARDIOLOGY": 0.7446,
+      "ELECTIVE_SURGERY": 0.9029,
+      "EMERGENCY": 0.9013,
+      "ONCOLOGY": 0.8104,
+      "ORTHOPEDICS": 0.8625,
+      "PEDIATRICS": 0.7851
+    },
+    "chronos_finetune": {
+      "CARDIOLOGY": 0.7186,
+      "ELECTIVE_SURGERY": 0.8224,
+      "EMERGENCY": 0.9721,
+      "ONCOLOGY": 0.7898,
+      "ORTHOPEDICS": 0.8765,
+      "PEDIATRICS": 0.902
+    },
+    "baseline_seasonal_mean_4w": {
+      "CARDIOLOGY": 0.7795,
+      "ELECTIVE_SURGERY": 0.8994,
+      "EMERGENCY": 0.9103,
+      "ONCOLOGY": 0.8344,
+      "ORTHOPEDICS": 0.877,
+      "PEDIATRICS": 0.8998
+    },
+    "baseline_seasonal_naive": {
+      "CARDIOLOGY": 0.8683,
+      "ELECTIVE_SURGERY": 1.1542,
+      "EMERGENCY": 1.0919,
+      "ONCOLOGY": 0.9339,
+      "ORTHOPEDICS": 0.9743,
+      "PEDIATRICS": 0.9986
+    },
+    "baseline_mean": {
+      "CARDIOLOGY": 1.4691,
+      "ELECTIVE_SURGERY": 2.1707,
+      "EMERGENCY": 1.3702,
+      "ONCOLOGY": 1.6664,
+      "ORTHOPEDICS": 1.4744,
+      "PEDIATRICS": 1.3564
+    },
+    "baseline_naive": {
+      "CARDIOLOGY": 1.783,
+      "ELECTIVE_SURGERY": 2.5204,
+      "EMERGENCY": 1.2398,
+      "ONCOLOGY": 1.8672,
+      "ORTHOPEDICS": 1.6447,
+      "PEDIATRICS": 1.032
+    },
+    "baseline_drift": {
+      "CARDIOLOGY": 1.8063,
+      "ELECTIVE_SURGERY": 2.5556,
+      "EMERGENCY": 1.2535,
+      "ONCOLOGY": 1.8884,
+      "ORTHOPEDICS": 1.6647,
+      "PEDIATRICS": 1.0453
+    }
+  },
+  "significance": [
+    {
+      "champion": "high_quality",
+      "vs": "ensemble",
+      "n_cells": 36,
+      "mean_diff": -0.0005929097096099181,
+      "champion_wins": 25,
+      "p_value": 0.006321071618003771,
+      "significant_at_0.05": true
+    },
+    {
+      "champion": "high_quality",
+      "vs": "global_covariates",
+      "n_cells": 36,
+      "mean_diff": -0.012716585542754814,
+      "champion_wins": 19,
+      "p_value": 0.42303156715934165,
+      "significant_at_0.05": false
+    },
+    {
+      "champion": "high_quality",
+      "vs": "sf_forecast_exog",
+      "n_cells": 36,
+      "mean_diff": -0.02454121320779483,
+      "champion_wins": 20,
+      "p_value": 0.08543607013416477,
+      "significant_at_0.05": false
+    },
+    {
+      "champion": "high_quality",
+      "vs": "zeroshot_chronos",
+      "n_cells": 36,
+      "mean_diff": -0.037691426683301506,
+      "champion_wins": 28,
+      "p_value": 0.000714874971890822,
+      "significant_at_0.05": true
+    },
+    {
+      "champion": "high_quality",
+      "vs": "sf_forecast_base",
+      "n_cells": 36,
+      "mean_diff": -0.07027302842537939,
+      "champion_wins": 30,
+      "p_value": 3.958528395742178e-06,
+      "significant_at_0.05": true
+    }
+  ],
+  "error_decomposition": {
+    "CARDIOLOGY": {
+      "total_err": 7.5787,
+      "noise_err": 7.3361,
+      "model_err": 2.8768,
+      "model_share_pct": 28.1686
+    },
+    "ELECTIVE_SURGERY": {
+      "total_err": 7.0381,
+      "noise_err": 5.3697,
+      "model_err": 4.006,
+      "model_share_pct": 42.7275
+    },
+    "EMERGENCY": {
+      "total_err": 22.4754,
+      "noise_err": 19.5415,
+      "model_err": 11.4225,
+      "model_share_pct": 36.8897
+    },
+    "ONCOLOGY": {
+      "total_err": 5.2412,
+      "noise_err": 4.5888,
+      "model_err": 2.0689,
+      "model_share_pct": 31.0752
+    },
+    "ORTHOPEDICS": {
+      "total_err": 6.0192,
+      "noise_err": 5.9062,
+      "model_err": 2.0841,
+      "model_share_pct": 26.0833
+    },
+    "PEDIATRICS": {
+      "total_err": 9.2471,
+      "noise_err": 8.5006,
+      "model_err": 3.5048,
+      "model_share_pct": 29.1939
+    }
+  }
+}

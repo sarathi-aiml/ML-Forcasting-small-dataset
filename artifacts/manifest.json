@@ -1,0 +1,278 @@
+{
+  "experiment": "HEALTHCARE.ML_FORECAST.HEALTHCARE_ADMISSIONS_FORECAST",
+  "protocol": "fit_once_rolling_predict",
+  "horizon": 28,
+  "n_windows": 6,
+  "quantiles": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "seasonal_period": 7,
+  "eval_metric": "MASE",
+  "budget_s": 5400,
+  "trial_budget_s": 4500,
+  "baseline": {
+    "model": "seasonal_mean_4w",
+    "MASE": 0.8667421853881786
+  },
+  "trials": [
+    {
+      "n": 1,
+      "label": "classical",
+      "status": "ok",
+      "champion": "WeightedEnsemble",
+      "n_models": 7,
+      "fit_seconds": 49.8,
+      "trial_seconds": 65.0,
+      "test_mean_MASE": 0.8345,
+      "test_worst_series_MASE": 0.9029,
+      "test_metrics": {
+        "MASE": 0.8345,
+        "RMSSE": 0.8011,
+        "sMAPE": 28.8265,
+        "MAE": 10.8934,
+        "ME": 3.3529,
+        "WQL": 0.1959,
+        "CRPS": 8.8295,
+        "PICP80": 0.8006
+      },
+      "model_path": "ag_models/t1_classical"
+    },
+    {
+      "n": 2,
+      "label": "zeroshot_chronos",
+      "status": "ok",
+      "champion": "Chronos_bolt_base[bolt_base]",
+      "n_models": 3,
+      "fit_seconds": 8.4,
+      "trial_seconds": 14.0,
+      "test_mean_MASE": 0.7825,
+      "test_worst_series_MASE": 0.8622,
+      "test_metrics": {
+        "MASE": 0.7825,
+        "RMSSE": 0.7426,
+        "sMAPE": 28.2939,
+        "MAE": 10.0322,
+        "ME": 1.892,
+        "WQL": 0.1772,
+        "CRPS": 7.8436,
+        "PICP80": 0.8065
+      },
+      "model_path": "ag_models/t2_zeroshot_chronos"
+    },
+    {
+      "n": 3,
+      "label": "global_covariates",
+      "status": "ok",
+      "champion": "WeightedEnsemble",
+      "n_models": 5,
+      "fit_seconds": 295.8,
+      "trial_seconds": 306.5,
+      "test_mean_MASE": 0.7576,
+      "test_worst_series_MASE": 0.8107,
+      "test_metrics": {
+        "MASE": 0.7576,
+        "RMSSE": 0.7202,
+        "sMAPE": 25.8767,
+        "MAE": 9.8919,
+        "ME": -0.6733,
+        "WQL": 0.1783,
+        "CRPS": 8.0956,
+        "PICP80": 0.8601
+      },
+      "model_path": "ag_models/t3_global_covariates"
+    },
+    {
+      "n": 4,
+      "label": "ensemble",
+      "status": "ok",
+      "champion": "WeightedEnsemble",
+      "n_models": 11,
+      "fit_seconds": 668.2,
+      "trial_seconds": 697.2,
+      "test_mean_MASE": 0.7454,
+      "test_worst_series_MASE": 0.8048,
+      "test_metrics": {
+        "MASE": 0.7454,
+        "RMSSE": 0.7181,
+        "sMAPE": 25.6853,
+        "MAE": 9.6106,
+        "ME": 0.9151,
+        "WQL": 0.1734,
+        "CRPS": 7.8354,
+        "PICP80": 0.8958
+      },
+      "model_path": "ag_models/t4_ensemble"
+    },
+    {
+      "n": 5,
+      "label": "chronos_finetune",
+      "status": "ok",
+      "champion": "Chronos_ft[bolt_small]",
+      "n_models": 1,
+      "fit_seconds": 822.5,
+      "trial_seconds": 828.1,
+      "test_mean_MASE": 0.8469,
+      "test_worst_series_MASE": 0.9721,
+      "test_metrics": {
+        "MASE": 0.8469,
+        "RMSSE": 0.788,
+        "sMAPE": 28.9623,
+        "MAE": 11.3306,
+        "ME": -4.304,
+        "WQL": 0.1839,
+        "CRPS": 8.8728,
+        "PICP80": 0.751
+      },
+      "model_path": "ag_models/t5_chronos_finetune"
+    },
+    {
+      "n": 6,
+      "label": "high_quality",
+      "status": "ok",
+      "champion": "WeightedEnsemble",
+      "n_models": 11,
+      "fit_seconds": 636.4,
+      "trial_seconds": 665.8,
+      "test_mean_MASE": 0.7448,
+      "test_worst_series_MASE": 0.8036,
+      "test_metrics": {
+        "MASE": 0.7448,
+        "RMSSE": 0.7174,
+        "sMAPE": 25.667,
+        "MAE": 9.6,
+        "ME": 0.9172,
+        "WQL": 0.1728,
+        "CRPS": 7.8054,
+        "PICP80": 0.8929
+      },
+      "model_path": "ag_models/t6_high_quality"
+    }
+  ],
+  "champion": {
+    "trial": "high_quality",
+    "mean_MASE": 0.7448,
+    "beats_baseline": true,
+    "improvement_pct": 14.06
+  },
+  "cross_trial": {
+    "high_quality": {
+      "mean_MASE": 0.7448,
+      "worst_series_MASE": 0.8036,
+      "RMSSE": 0.7174,
+      "sMAPE": 25.667,
+      "MAE": 9.6,
+      "ME": 0.9172,
+      "WQL": 0.1728,
+      "CRPS": 7.8054,
+      "PICP80": 0.8929
+    },
+    "ensemble": {
+      "mean_MASE": 0.7454,
+      "worst_series_MASE": 0.8048,
+      "RMSSE": 0.7181,
+      "sMAPE": 25.6853,
+      "MAE": 9.6106,
+      "ME": 0.9151,
+      "WQL": 0.1734,
+      "CRPS": 7.8354,
+      "PICP80": 0.8958
+    },
+    "global_covariates": {
+      "mean_MASE": 0.7576,
+      "worst_series_MASE": 0.8107,
+      "RMSSE": 0.7202,
+      "sMAPE": 25.8767,
+      "MAE": 9.8919,
+      "ME": -0.6733,
+      "WQL": 0.1783,
+      "CRPS": 8.0956,
+      "PICP80": 0.8601
+    },
+    "zeroshot_chronos": {
+      "mean_MASE": 0.7825,
+      "worst_series_MASE": 0.8622,
+      "RMSSE": 0.7426,
+      "sMAPE": 28.2939,
+      "MAE": 10.0322,
+      "ME": 1.892,
+      "WQL": 0.1772,
+      "CRPS": 7.8436,
+      "PICP80": 0.8065
+    },
+    "classical": {
+      "mean_MASE": 0.8345,
+      "worst_series_MASE": 0.9029,
+      "RMSSE": 0.8011,
+      "sMAPE": 28.8265,
+      "MAE": 10.8934,
+      "ME": 3.3529,
+      "WQL": 0.1959,
+      "CRPS": 8.8295,
+      "PICP80": 0.8006
+    },
+    "chronos_finetune": {
+      "mean_MASE": 0.8469,
+      "worst_series_MASE": 0.9721,
+      "RMSSE": 0.788,
+      "sMAPE": 28.9623,
+      "MAE": 11.3306,
+      "ME": -4.304,
+      "WQL": 0.1839,
+      "CRPS": 8.8728,
+      "PICP80": 0.751
+    }
+  },
+  "total_elapsed_s": 2583.0,
+  "conformal": [
+    {
+      "dept_id": "CARDIOLOGY",
+      "conformal_PICP80": 0.7143,
+      "native_PICP80": 0.8661,
+      "conformal_width": 22.329,
+      "native_width": 33.3881
+    },
+    {
+      "dept_id": "ELECTIVE_SURGERY",
+      "conformal_PICP80": 0.8839,
+      "native_PICP80": 0.9196,
+      "conformal_width": 28.5333,
+      "native_width": 30.8507
+    },
+    {
+      "dept_id": "EMERGENCY",
+      "conformal_PICP80": 0.6339,
+      "native_PICP80": 0.9286,
+      "conformal_width": 54.8808,
+      "native_width": 122.4368
+    },
+    {
+      "dept_id": "ONCOLOGY",
+      "conformal_PICP80": 0.8125,
+      "native_PICP80": 0.875,
+      "conformal_width": 17.5812,
+      "native_width": 19.1086
+    },
+    {
+      "dept_id": "ORTHOPEDICS",
+      "conformal_PICP80": 0.9196,
+      "native_PICP80": 0.9286,
+      "conformal_width": 26.159,
+      "native_width": 25.6862
+    },
+    {
+      "dept_id": "PEDIATRICS",
+      "conformal_PICP80": 0.5357,
+      "native_PICP80": 0.8482,
+      "conformal_width": 18.3771,
+      "native_width": 39.9591
+    }
+  ]
+}

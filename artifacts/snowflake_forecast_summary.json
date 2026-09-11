@@ -1,0 +1,112 @@
+{
+  "scores": {
+    "sf_forecast_exog": {
+      "MASE": 0.7694,
+      "RMSSE": 0.7214,
+      "sMAPE": 28.8653,
+      "MAE": 10.0721,
+      "RMSE": 12.798,
+      "ME": 1.1717,
+      "PICP80": 0.7371,
+      "MIS80": 47.7901,
+      "WIDTH80": 27.3064
+    },
+    "sf_forecast_base": {
+      "MASE": 0.8151,
+      "RMSSE": 0.7693,
+      "sMAPE": 29.7841,
+      "MAE": 10.5881,
+      "RMSE": 13.4814,
+      "ME": 1.3837,
+      "PICP80": 0.7292,
+      "MIS80": 50.5166,
+      "WIDTH80": 28.0336
+    }
+  },
+  "worst_series_MASE": {
+    "sf_forecast_base": 0.9113,
+    "sf_forecast_exog": 0.8389
+  },
+  "timings": [
+    {
+      "trial": "sf_forecast_base",
+      "window": 1,
+      "fit_seconds": 157.47
+    },
+    {
+      "trial": "sf_forecast_base",
+      "window": 2,
+      "fit_seconds": 119.79
+    },
+    {
+      "trial": "sf_forecast_base",
+      "window": 3,
+      "fit_seconds": 120.76
+    },
+    {
+      "trial": "sf_forecast_base",
+      "window": 4,
+      "fit_seconds": 128.61
+    },
+    {
+      "trial": "sf_forecast_base",
+      "window": 5,
+      "fit_seconds": 99.65
+    },
+    {
+      "trial": "sf_forecast_base",
+      "window": 6,
+      "fit_seconds": 126.17
+    },
+    {
+      "trial": "sf_forecast_exog",
+      "window": 1,
+      "fit_seconds": 276.57
+    },
+    {
+      "trial": "sf_forecast_exog",
+      "window": 2,
+      "fit_seconds": 348.72
+    },
+    {
+      "trial": "sf_forecast_exog",
+      "window": 3,
+      "fit_seconds": 439.13
+    },
+    {
+      "trial": "sf_forecast_exog",
+      "window": 4,
+      "fit_seconds": 288.9
+    },
+    {
+      "trial": "sf_forecast_exog",
+      "window": 5,
+      "fit_seconds": 287.05
+    },
+    {
+      "trial": "sf_forecast_exog",
+      "window": 6,
+      "fit_seconds": 343.67
+    }
+  ],
+  "known_future_covariates": [
+    "DOW_SIN",
+    "DOW_COS",
+    "MONTH_SIN",
+    "MONTH_COS",
+    "ANN_SIN1",
+    "ANN_COS1",
+    "ANN_SIN2",
+    "ANN_COS2",
+    "ANN_SIN3",
+    "ANN_COS3",
+    "IS_WEEKEND",
+    "IS_MONDAY",
+    "IS_HOLIDAY",
+    "IS_HOLIDAY_WINDOW",
+    "DAYS_TO_HOLIDAY",
+    "DAYS_SINCE_HOLIDAY",
+    "IS_SCHOOL_TERM"
+  ],
+  "note": "fresh model per window; WQL/CRPS not computable (single interval, no quantile grid)"
+}
